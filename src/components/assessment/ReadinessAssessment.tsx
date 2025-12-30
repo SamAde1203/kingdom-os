@@ -1,7 +1,7 @@
 // src/components/assessment/ReadinessAssessment.tsx
 import React, { useState } from 'react';
 import { Shield, Check, X, ChevronDown, ChevronUp } from 'lucide-react';
-import { AssessmentScore } from '../../types/ministry';
+import type { AssessmentScore } from '../../types/ministry';
 import { calculateReadiness } from '../../utils/validation';
 
 const ReadinessAssessment: React.FC = () => {

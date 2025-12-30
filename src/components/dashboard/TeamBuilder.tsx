@@ -127,7 +127,7 @@ const TeamBuilder: React.FC = () => {
                     <div className="flex items-center justify-between mb-6">
                       <div className="flex items-center gap-4">
                         <div className="p-4 bg-white rounded-2xl shadow">
-                          <Icon size={48} className={config.iconColor} />
+                          <Icon size={48} className={config.color} />
                         </div>
                         <div>
                           <h3 className="text-2xl font-bold text-gray-800">{role}s</h3>

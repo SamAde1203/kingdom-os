@@ -1,8 +1,14 @@
-// src/components/dashboard/Navigation.tsx
+// src/components/layout/Navigation.tsx
 import React from 'react';
 import {
-  Home, Shield, Target, Users, BarChart, Heart,
-  Check, Globe, Settings, Bell, BookOpen, Users as UsersIcon
+  Home,
+  Shield,
+  Target,
+  Users,
+  BarChart,
+  Heart,
+  Check,
+  Globe
 } from 'lucide-react';
 
 interface NavigationProps {
@@ -15,14 +21,13 @@ const Navigation: React.FC<NavigationProps> = ({ activeTab, onTabChange }) => {
     { id: 'dashboard', label: 'Dashboard', icon: Home, color: 'text-purple-600' },
     { id: 'assessment', label: 'Assessment', icon: Shield, color: 'text-blue-600' },
     { id: 'content', label: 'Content', icon: Target, color: 'text-green-600' },
-    { id: 'team', label: 'Team', icon: UsersIcon, color: 'text-yellow-600' },
+    { id: 'team', label: 'Team', icon: Users, color: 'text-yellow-600' },
     { id: 'metrics', label: 'Metrics', icon: BarChart, color: 'text-indigo-600' },
     { id: 'prayer', label: 'Prayer', icon: Heart, color: 'text-red-600' },
     { id: 'testimony', label: 'Testimonies', icon: Check, color: 'text-teal-600' },
     { id: 'dualchurch', label: 'Dual Churches', icon: Globe, color: 'text-cyan-600' },
   ];
 
-  // Desktop Sidebar Navigation
   const DesktopNav = () => (
     <nav className="flex-1 overflow-y-auto py-4 px-2 space-y-1">
       {tabs.map(tab => {
@@ -53,7 +58,6 @@ const Navigation: React.FC<NavigationProps> = ({ activeTab, onTabChange }) => {
     </nav>
   );
 
-  // Mobile Horizontal Navigation
   const MobileNav = () => (
     <div className="flex overflow-x-auto px-2 py-3 space-x-2 scrollbar-hide">
       {tabs.map(tab => {
@@ -82,12 +86,9 @@ const Navigation: React.FC<NavigationProps> = ({ activeTab, onTabChange }) => {
 
   return (
     <>
-      {/* Desktop Navigation */}
       <div className="hidden lg:block h-full">
         <DesktopNav />
       </div>
-      
-      {/* Mobile Navigation */}
       <div className="lg:hidden">
         <MobileNav />
       </div>
